@@ -37,14 +37,14 @@ pSkilMack<-function(x,b=NA,trt=NA,method=NA,n.mc=10000){
   outp$obs.mat[!is.na(x)]<-1
   outp$x<-x
 
-  outp$s<-s<-rowSums(outp$obs.mat)
+  outp$ss<-s<-rowSums(outp$obs.mat)
 
   ##When the user doesn't give us any indication of which method to use, try to pick one.
   if(is.na(method)){
-    if(prod(factorial(outp$s))<=10000){
+    if(prod(factorial(outp$ss))<=10000){
       method<-"Exact"
     }
-    if(prod(factorial(outp$s))>10000){
+    if(prod(factorial(outp$ss))>10000){
       method<-"Monte Carlo"
     }
   }

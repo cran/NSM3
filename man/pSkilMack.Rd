@@ -29,7 +29,7 @@ The data entry is intended to be flexible, so that the data can be entered in ei
 Returns a list with "NSM3Ch7p" class containing the following components:
 \item{k}{number of treatments in the data}
 \item{n}{number of blocks in the data}
-\item{s}{number of treatments per block}
+\item{ss}{number of treatments per block}
 \item{obs.stat}{the observed D statistic}
 \item{p.val}{upper tail P-value}
 }

@@ -1,4 +1,4 @@
-82dd9c7d09e590bb407f92bc02d68616 *DESCRIPTION
+e42e21d770dcd8a2d192fcf7e9d8bb27 *DESCRIPTION
 0542824f55e13e653526984dc9363fd4 *NAMESPACE
 40033ce5c54a236d936c2fc5dbae3fb5 *R/CorrUpperBound.R
 aead07cf6fc276543f2d9d70ff2ab57a *R/HoeffD.R
@@ -9,7 +9,7 @@ eb192973f9ae89ddc4b61e947e819d9d *R/RFPW.R
 2da5ef0caa2e3280f983dc121cbc7db2 *R/RSS.R
 0a70d268647e272e2d898073df0da8d8 *R/cAnsBrad.R
 5aa9d9e4b0fd87f87fdff88897139e91 *R/cBohnWolfe.R
-3c71ce3c0ff5307e9380583f8032a87a *R/cDurSkiMa.R
+ffb497d9d4e41f86d4789dd02102a338 *R/cDurSkiMa.R
 bbff1a4eac4364542d8c558c5f72e446 *R/cFligPoli.R
 cc8ef5ac493b990ae4dc0d7d4098a35f *R/cFrd.R
 9ec2d364a1ad3ea34421be8ebf049bef *R/cHaySton.R
@@ -26,7 +26,7 @@ d833743eae74501d0c7a4d7f86c257c6 *R/cNDWol.R
 a5af44f72447e34fad0a27e5d4285b12 *R/cPage.R
 6a1c1a11b6b3a31e084136daabe32d0e *R/cRangeNor.R
 cac2693092c52bc688d0a95132d56b88 *R/cSDCFlig.R
-0e8dbc59fd3fe6b3093b3c85aef45eb3 *R/cSkilMack.R
+183c91f58d3d30eeb0aab837732caa28 *R/cSkilMack.R
 852fbafd065a0ea55959767d3f3e1193 *R/cUmbrPK.R
 02b27eb8634e0b2f50b142a9016731d5 *R/cUmbrPU.R
 884d2ab8e2f21dd9ea716d947a71d956 *R/cWNMT.R
@@ -53,7 +53,7 @@ cecb4a889db192c217d4e98464602b90 *R/ferg.df.R
 37ef8908cb3cb0d443f9a85738a63e4a *R/p.mc.R
 156035fc591c6593255dc36dea814493 *R/pAnsBrad.R
 8fce4c9523a4291f8bb10cd0b0d76a2e *R/pBohnWolfe.R
-da43b0f79508e5b499ca964199c90f0f *R/pDurSkiMa.R
+be97110f42d7ec3840de03f6099c733e *R/pDurSkiMa.R
 3aa268baba69ab845ad0322ad002a9ef *R/pFligPoli.R
 714b1fa12c4abd7537debbee37ff1df1 *R/pFrd.R
 b8e193f8be66368c66412323ba965ed2 *R/pHaySton.R
@@ -72,7 +72,7 @@ fabe3377684a8f4759bdcab4b86e3122 *R/pKW.R
 a2da910733ee8c654f0828e9f4e62c2c *R/pPairedWilcoxon.R
 fc7e857bd3c38b1b1caaf8d63bbc8431 *R/pRangeNor.R
 5dd2ca1f63f5bf3296d1ac867658d5c4 *R/pSDCFlig.R
-359594903ed31d5db9c717ca761e3c1c *R/pSkilMack.R
+028303f30a5ff07ecc5c9fddcd9ec80c *R/pSkilMack.R
 2376bcde21a418a1894a89cd4228e6e6 *R/pUmbrPK.R
 0c2cc45cbcaee7f9652a5f95ca00dbdf *R/pUmbrPU.R
 ed63919a6d355f52cf99be001f803b3b *R/pWNMT.R
@@ -84,8 +84,8 @@ d7ce1040644b4c1c0a6883abfb84cb8c *R/print.NSM3Ch6c.R
 a8a7c656840a709cef1ebb790de2fa77 *R/print.NSM3Ch6p.R
 e97c6b833af95d09fc37907816335b13 *R/print.NSM3Ch7MCc.R
 9307aed2550694f28f70f1cac2e8b2a3 *R/print.NSM3Ch7MCp.R
-84b63778b9af78eab21b008df47f6a8b *R/print.NSM3Ch7c.R
-9aa3af3a108ab6390a5ef425a75b2e5c *R/print.NSM3Ch7p.R
+47aef198eac9fc73c3660d7b58be757b *R/print.NSM3Ch7c.R
+216c373b0b93feb549bdcbe26229d5af *R/print.NSM3Ch7p.R
 c2e2ca2797dbbe55c9da48bd08b3d217 *R/qKolSmirnLSA.R
 b52f2d3aa874f5f6049d8054c173ef9e *R/sen.adichie.R
 a8cbca1f0e40a976af0b472fc2993016 *R/svr.df.R
@@ -187,7 +187,7 @@ e3f050b87ccc4286deb490714b773141 *man/HoeffD.Rd
 17af41b71513a7dba2f74e1bf8044c13 *man/RSS.Rd
 211d280c7487b42bf2d3573a17253e8b *man/cAnsBrad.Rd
 dbf94c7fb3a7608aa97944bd2efa9cfa *man/cBohnWolfe.Rd
-fb149a3f98bc902d6673c339cce8b0cb *man/cDurSkiMa.Rd
+ba87258a1c9d3156d2106a68549c3a55 *man/cDurSkiMa.Rd
 db59905df37774078d1d01903f9368bf *man/cFligPoli.Rd
 fc55ae1139799bace9a7ad62ef9eeac5 *man/cFrd.Rd
 ba0b8dc0701cc7b25d871b05ec2057dd *man/cHaySton.Rd
@@ -204,7 +204,7 @@ ab5a13e588e4e58095202bc67fb65762 *man/cNDWol.Rd
 7baeba782fa600d9f682fb3fb7ab2d5a *man/cPage.Rd
 7252191cee33a0895587295ed3a19bf4 *man/cRangeNor.Rd
 ce6f0bb9e9b9290c0f93bd2bc403f97e *man/cSDCFlig.Rd
-3082a882d0d37a718df7633848c0ab28 *man/cSkilMack.Rd
+4937baa913ac021ace41233cede39fea *man/cSkilMack.Rd
 c9bdbe7de29365913d8d89f33c6453fc *man/cUmbrPK.Rd
 809e997612dedd96e7558ecbab398762 *man/cUmbrPU.Rd
 2cefe943f2b0fca438f3e7363087432e *man/cWNMT.Rd
@@ -230,7 +230,7 @@ edbb76086f4a7e5271501331f1172368 *man/nb.mc.Rd
 594e93db68cd0b9b6041ad6bdc4d2b2d *man/owa.Rd
 0921de4d12da446a24de9a0b6c791903 *man/pAnsBrad.Rd
 cd044cef74f25c14a65cede72173c8e9 *man/pBohnWolfe.Rd
-0a36c7ce7464fee0c5a61b0a07743271 *man/pDurSkiMa.Rd
+250807fb2f5b9fef3bcb01137b484c62 *man/pDurSkiMa.Rd
 0f9d362d117a62241aa9cae755fc4f5f *man/pFligPoli.Rd
 8300de485b1b9dc3f21c7bde8e3df41f *man/pFrd.Rd
 ab89decb57c3a39c2bb5880452180ae4 *man/pHaySton.Rd
@@ -249,13 +249,13 @@ cde106309357a858753c597d4fe3bbd4 *man/pNWWM.Rd
 8f1742728739d7d5a82cffe3953730de *man/pPairedWilcoxon.Rd
 c88fe8479d75b38e3bc1bdad1712d778 *man/pRangeNor.Rd
 4d8e28da44123c622366a2e616c7c581 *man/pSDCFlig.Rd
-277169c859a93117f2335e499f333737 *man/pSkilMack.Rd
+996a20acb16006a0df3364132cfdb9fe *man/pSkilMack.Rd
 977d71f5fc876fbc87fe59beaaae44d8 *man/pUmbrPK.Rd
 ea22bf0e0a551e4488ce1fb29ce771a2 *man/pUmbrPU.Rd
 44d21d898fac94b9425b9dd80054ab6a *man/pWNMT.Rd
 9507ccbceba32458072cece042cb05d1 *man/print.NSM3Ch5c.Rd
 fbfda405186cff06423699722e8caaff *man/qKolSmirnLSA.Rd
-b6a0514f483f19f9b66043c3bf10ad43 *man/rhythmicity.Rd
+f7c30e7b39e51e4284ae77bce60a83f3 *man/rhythmicity.Rd
 7569e78c4c95363f93db8f84eaa1d9a3 *man/sen.adichie.Rd
 0b2304b1a752cd4ee12f7e1b7fb18165 *man/svr.df.Rd
 c8e8741b68cc28384ee0e2c7918c03ed *man/tc.Rd

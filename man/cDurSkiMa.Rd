@@ -25,7 +25,7 @@ The incidence matrix, obs.mat, will be an n x k matrix of ones and zeroes, which
 Returns a list with "NSM3Ch7c" class containing the following components:
  \item{k}{number of treatments}
  \item{n}{number of blocks}
- \item{s}{number of treatments per block}
+ \item{ss}{number of treatments per block}
  \item{pp}{number of observations per treatment}
  \item{lambda}{number of times each pair of treatments occurs together within a block}
 \item{cutoff.U}{upper tail cutoff at or below user-specified alpha}

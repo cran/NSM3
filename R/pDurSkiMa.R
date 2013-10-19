@@ -40,9 +40,9 @@ pDurSkiMa<-function(x,b=NA,trt=NA,method=NA,n.mc=10000){
     stop("Must be same number of observations per treatment")
   }
   ###
-  outp$s<-s<-sum(!is.na(x[1,]))
+  outp$ss<-s<-sum(!is.na(x[1,]))
   outp$pp<-p<-sum(!is.na(x[,1]))
-  outp$lambda<-outp$pp*(outp$s-1)/(outp$k-1)
+  outp$lambda<-outp$pp*(outp$ss-1)/(outp$k-1)
   
   
   outp$obs.mat<-matrix(0,ncol=outp$k,nrow=outp$n)
@@ -51,10 +51,10 @@ pDurSkiMa<-function(x,b=NA,trt=NA,method=NA,n.mc=10000){
   
   ##When the user doesn't give us any indication of which method to use, try to pick one.
   if(is.na(method)){
-    if(factorial(outp$s)^outp$n<=10000){
+    if(factorial(outp$ss)^outp$n<=10000){
       method<-"Exact"
     }
-    if(factorial(outp$s)^outp$n>10000){
+    if(factorial(outp$ss)^outp$n>10000){
       method<-"Monte Carlo"
     }
   }
@@ -70,7 +70,7 @@ pDurSkiMa<-function(x,b=NA,trt=NA,method=NA,n.mc=10000){
       tmp.mat[i,tmp.mat[i,]!=0]<-obs.data[i,]
     }
     Rj<-apply(tmp.mat,2,function(x) sum(x[!is.na(x)]))
-    D.stat<-12/(outp$lambda*outp$k*(outp$s+1))*sum((Rj-outp$pp*(outp$s+1)/2)^2)
+    D.stat<-12/(outp$lambda*outp$k*(outp$ss+1))*sum((Rj-outp$pp*(outp$ss+1)/2)^2)
     return(D.stat)
   }
   
@@ -82,7 +82,7 @@ pDurSkiMa<-function(x,b=NA,trt=NA,method=NA,n.mc=10000){
     outp$p.val<-mean(exact.dist>=outp$obs.stat)      
   }
   if(outp$method=="Monte Carlo"){
-    mc.perm<-matrix(ncol=outp$s,nrow=outp$n)
+    mc.perm<-matrix(ncol=outp$ss,nrow=outp$n)
     mc.stats<-numeric(n.mc)
     for(i in 1:n.mc){
       for(j in 1:n){

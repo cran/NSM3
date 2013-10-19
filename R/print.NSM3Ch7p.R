@@ -9,8 +9,8 @@ print.NSM3Ch7p <-function(x,...){
     if(!is.null(x$trt)){
       cat("Control group size: ", x$trt, "Treatment group size(s): ", x$n, "\n")
     }
-  if(!is.null(x$s)){
-    cat("Number of treatments per block: s=", x$s,"\n")
+  if(!is.null(x$ss)){
+    cat("Number of treatments per block: s=", x$ss,"\n")
   }
   if(!is.null(x$pp)){
     cat("Number of observations per treatment: p=", x$pp,"\n")

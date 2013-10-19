@@ -1,4 +1,4 @@
-\name{rhythmicity}
+\name{data}
 \alias{rhythmicity}
  \alias{JASA1994}
  \alias{JASA1995}

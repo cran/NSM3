@@ -24,7 +24,7 @@ The incidence matrix, obs.mat, will be an n x k matrix of ones and zeroes, which
 Returns a list with "NSM3Ch7c" class containing the following components:
  \item{k}{number of treatments}
  \item{n}{number of blocks}
- \item{s}{number of treatments per block}
+ \item{ss}{number of treatments per block}
 \item{cutoff.U}{upper tail cutoff at or below user-specified alpha}
 \item{true.alpha.U}{true alpha level corresponding to cutoff.U (if method="Exact" or "Monte Carlo")}
 }

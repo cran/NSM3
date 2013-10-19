@@ -10,8 +10,8 @@ print.NSM3Ch7c <-
       cat("Number of blocks: n=", x$n,"\n")
       cat("Number of treatments: k=", x$k, "\n")
     }
-    if(!is.null(x$s)){
-      cat("Number of treatments per block: s=", x$s,"\n")
+    if(!is.null(x$ss)){
+      cat("Number of treatments per block: s=", x$ss,"\n")
     }
     if(!is.null(x$pp)){
       cat("Number of observations per treatment: p=", x$pp,"\n")
