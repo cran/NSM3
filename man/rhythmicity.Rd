@@ -1,0 +1,108 @@
+\name{rhythmicity}
+\alias{rhythmicity}
+ \alias{JASA1994}
+ \alias{JASA1995}
+ \alias{NHANES.III}
+ \alias{RVP}
+ \alias{SP}
+ \alias{ac}
+ \alias{adaptation.scores}
+ \alias{alcohol.intake}
+ \alias{ammonium.flux}
+ \alias{annual.salaries}
+ \alias{at.term}
+ \alias{b.mrl}
+ \alias{b.sf}
+ \alias{beak}
+ \alias{bleeding.time}
+ \alias{blood.levels}
+ \alias{book.value.audited.value}
+ \alias{cen}
+ \alias{chemical.toxicity}
+ \alias{chromium}
+ \alias{cinchona}
+ \alias{cloud.seeding}
+ \alias{cps71}
+ \alias{days}
+ \alias{discrepancy.scores}
+ \alias{ethanol}
+ \alias{feedback}
+ \alias{florida.pokeweed}
+ \alias{forearm}
+ \alias{framingham}
+ \alias{freestyle}
+ \alias{gest.age}
+ \alias{gizzards}
+ \alias{goose.chick}
+ \alias{gun.registration}
+ \alias{hamilton}
+ \alias{hodgkins.affected}
+ \alias{hodgkins.total}
+ \alias{hydroxycortisol}
+ \alias{hydroxyproline}
+ \alias{hypnotic.susceptibility}
+ \alias{insulin.clearance}
+ \alias{jung.parekh}
+ \alias{kentucky.pokeweed}
+ \alias{leukemia}
+ \alias{liver.scan}
+ \alias{liver.scan8}
+ \alias{mayfly}
+ \alias{mean.drop}
+ \alias{metabolic.rate}
+ \alias{methyl}
+ \alias{motivational.effect}
+ \alias{mucociliary}
+ \alias{net.oxygen.consumption}
+ \alias{niacin}
+ \alias{no.feedback}
+ \alias{not.prednisone}
+ \alias{oxidant.content}
+ \alias{pigs}
+ \alias{plasma.glucoose}
+ \alias{plasma.healthy}
+ \alias{plasma.poisoned}
+ \alias{plasma}
+ \alias{platelet.counts}
+ \alias{pokeweed}
+ \alias{pre}
+ \alias{prednisone}
+ \alias{proline.collagen}
+ \alias{rad}
+ \alias{ramsay}
+ \alias{relapse}
+ \alias{rhythmicity}
+ \alias{rounding.times}
+ \alias{ruffed.grouse}
+ \alias{serum}
+ \alias{settling.velocities}
+ \alias{smp}
+ \alias{spacecraft}
+ \alias{strength.index}
+ \alias{swimming}
+ \alias{table11.2}
+ \alias{tb}
+ \alias{tuna}
+ \alias{velocity}
+ \alias{wechsler}
+\docType{data}
+\title{
+Dataset
+}
+\description{
+These are the datasets used in the Examples of Hollander, Wolfe, and Chicken - Nonparametric Statistical Methods Third Edition. More extensive details about the data may be found there.
+}
+\usage{data(rhythmicity)}
+\format{
+  The format varies depending on the dataset.
+}
+
+\source{
+Hollander, Wolfe, and Chicken - Nonparametric Statistical Methods, Third Edition
+}
+
+\examples{
+data(rhythmicity)
+data(forearm)
+}
+\keyword{datasets}
