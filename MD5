@@ -1,4 +1,4 @@
-91ca21dfb6957c3fe9da75f1ce88d030 *DESCRIPTION
+76fc26f20fa0db8cc7deac64c23be0a3 *DESCRIPTION
 0542824f55e13e653526984dc9363fd4 *NAMESPACE
 40033ce5c54a236d936c2fc5dbae3fb5 *R/CorrUpperBound.R
 aead07cf6fc276543f2d9d70ff2ab57a *R/HoeffD.R
@@ -55,7 +55,7 @@ cecb4a889db192c217d4e98464602b90 *R/ferg.df.R
 8fce4c9523a4291f8bb10cd0b0d76a2e *R/pBohnWolfe.R
 be97110f42d7ec3840de03f6099c733e *R/pDurSkiMa.R
 3aa268baba69ab845ad0322ad002a9ef *R/pFligPoli.R
-714b1fa12c4abd7537debbee37ff1df1 *R/pFrd.R
+9b071fef85d8a360d8b70596baa1f663 *R/pFrd.R
 b8e193f8be66368c66412323ba965ed2 *R/pHaySton.R
 f2fd0848982452597958bc0d588cb023 *R/pHayStonLSA.R
 52c43f3d23d0a6349a009aa987bbcaf4 *R/pHoeff.R
@@ -125,7 +125,7 @@ bba4ee2cda969004b508db99930d90e1 *data/framingham.rda
 62e944565c4cfd66c4e80323fbbc23c5 *data/freestyle.rda
 337657a4ac50d8d89cfcc7bf52d78a91 *data/gest.age.rda
 f72b12315a46470d5a83661fd386c9a1 *data/gizzards.rda
-1de59d6da6e26e3fdf826e45ee18e765 *data/goose.rda
+5ce1ce35df6d4500b9a8fd69991852cc *data/goose.rda
 50e9df812c607ffb359e41e1f1c0ff96 *data/gun.registration.rda
 36de4213e3ed6562c90e473ada843b47 *data/hamilton.rda
 a3fccee8e227be5c9e3cd0bc82e539ad *data/hodgkins.affected.rda
@@ -255,7 +255,7 @@ ea22bf0e0a551e4488ce1fb29ce771a2 *man/pUmbrPU.Rd
 44d21d898fac94b9425b9dd80054ab6a *man/pWNMT.Rd
 9507ccbceba32458072cece042cb05d1 *man/print.NSM3Ch5c.Rd
 fbfda405186cff06423699722e8caaff *man/qKolSmirnLSA.Rd
-f7c30e7b39e51e4284ae77bce60a83f3 *man/rhythmicity.Rd
+ffbf66a87dc71eccf042be95e325a682 *man/rhythmicity.Rd
 7569e78c4c95363f93db8f84eaa1d9a3 *man/sen.adichie.Rd
 0b2304b1a752cd4ee12f7e1b7fb18165 *man/svr.df.Rd
 c8e8741b68cc28384ee0e2c7918c03ed *man/tc.Rd

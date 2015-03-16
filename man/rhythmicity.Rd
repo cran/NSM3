@@ -33,7 +33,7 @@
  \alias{freestyle}
  \alias{gest.age}
  \alias{gizzards}
- \alias{goose.chick}
+ \alias{goose}
  \alias{gun.registration}
  \alias{hamilton}
  \alias{hodgkins.affected}

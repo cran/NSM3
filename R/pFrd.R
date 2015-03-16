@@ -146,4 +146,5 @@ pFrd<-function(x,b=NA,trt=NA,method=NA, n.mc=10000){
   }
   
   class(outp)<-"NSM3Ch7p"
+  outp
 }
