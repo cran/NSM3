@@ -1,4 +1,4 @@
-e42e21d770dcd8a2d192fcf7e9d8bb27 *DESCRIPTION
+91ca21dfb6957c3fe9da75f1ce88d030 *DESCRIPTION
 0542824f55e13e653526984dc9363fd4 *NAMESPACE
 40033ce5c54a236d936c2fc5dbae3fb5 *R/CorrUpperBound.R
 aead07cf6fc276543f2d9d70ff2ab57a *R/HoeffD.R
@@ -90,7 +90,7 @@ c2e2ca2797dbbe55c9da48bd08b3d217 *R/qKolSmirnLSA.R
 b52f2d3aa874f5f6049d8054c173ef9e *R/sen.adichie.R
 a8cbca1f0e40a976af0b472fc2993016 *R/svr.df.R
 619b8d4855ca0a934d82f561048e36e5 *R/tc.R
-7acc057fda7041c0603b4979b933df4b *R/theil.R
+73668a974149b7a37ce773e2b97832a7 *R/theil.R
 674fd74d6ae663a0969db30546c527d6 *R/zelen.test.R
 34d65d9227818cc4be12df0384007932 *data/JASA1994.rda
 430ce4d7a624ae197c14bb4ea2dfe107 *data/JASA1995.rda
@@ -238,7 +238,7 @@ ab89decb57c3a39c2bb5880452180ae4 *man/pHaySton.Rd
 6015b2115e082f2e5d30e803d33085eb *man/pHoeff.Rd
 01b2d9ec8cb9702f42cdddf9ec7ecfde *man/pHollBivSym.Rd
 029902e5d456d24cd9ee215935f5e2d4 *man/pJCK.Rd
-57c85d5b9591a3489731b32753711826 *man/pKW.Rd
+8834e3bb9237c70a28feabc32f7233b3 *man/pKW.Rd
 d0e84f4bd2ebe378f6d5981872f0d14c *man/pKolSmirn.Rd
 310d5f7b90e5c3226de17d5156ad1baa *man/pLepage.Rd
 ea82461de88fa709579d44591f91684a *man/pMackSkil.Rd
@@ -259,7 +259,7 @@ f7c30e7b39e51e4284ae77bce60a83f3 *man/rhythmicity.Rd
 7569e78c4c95363f93db8f84eaa1d9a3 *man/sen.adichie.Rd
 0b2304b1a752cd4ee12f7e1b7fb18165 *man/svr.df.Rd
 c8e8741b68cc28384ee0e2c7918c03ed *man/tc.Rd
-c3c09fa802b5fb5af5db5e9ac2f10914 *man/theil.Rd
+f29b13cb590ed7da8ec1b0d92fdee4d2 *man/theil.Rd
 b029c77045c0474f3097a6e33b4146f7 *man/zelen.test.Rd
 48429176c9e2003568639e1be42aa2e9 *src/ansari.c
 5dda88ac914a65b1f5ec7a428f7386c9 *src/ks.c

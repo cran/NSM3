@@ -15,7 +15,7 @@ pKW(x,g=NA, method=NA, n.mc=10000)
   \item{method}{Either "Exact", "Monte Carlo", or "Asymptotic", indicating the desired distribution. When method=NA and ties are not present, "Exact" will be used. When method=NA and ties are present, "Exact" will be used if the number of permutations is 10,000 or less. Otherwise, "Monte Carlo" will be used.
 }
   \item{n.mc}{
-  Not used.  Only included for standardization with other critical value procedures in the NSM3 package.
+  If method="Monte Carlo", the number of Monte Carlo samples used to estimate the distribution. Otherwise, not used.
 }
 }
 \details{

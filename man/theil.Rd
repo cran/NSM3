@@ -8,7 +8,7 @@ This code estimates and performs tests on the slope and intercept of a simple li
 }
 \usage{
 theil(x=NULL, y=NULL, alpha=0.05, beta.0=0, type="t", 
-      example=F, r=3, slopes=F, doplot=TRUE) 
+      example=FALSE, r=3, slopes=F, doplot=TRUE) 
 }
 \arguments{
  \item{x}{first data vector}
