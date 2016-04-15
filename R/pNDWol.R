@@ -85,7 +85,7 @@ pNDWol<-function(x,g=NA,method=NA, n.mc=10000){
   possible.ranks<-rank(x)
   
   Y.star.calc<-function(obs.order){
-    R.vec<-unlist(lapply(1:k,function(x) mean(obs.order[g==x])))
+    R.vec<-unlist(lapply(1:k,function(x) mean(obs.order[g==levels(g)[x]])))
     N.star*(R.vec[-1]-R.vec[1])
   }
   outp$obs.stat<-Y.star.calc(possible.ranks)

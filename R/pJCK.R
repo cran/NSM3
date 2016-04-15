@@ -58,7 +58,7 @@ pJCK<-function(x,g=NA,method=NA, n.mc=10000){
   JT.calc<-function(obs.data){
     U.vec<-numeric(k*(k-1)/2)
     U.calc<-function(i,j){
-      wilcox.test(obs.data[g==i],obs.data[g==j])$statistic
+      wilcox.test(obs.data[g==levels(g)[i]],obs.data[g==levels(g)[j]])$statistic
     }
     
     count<-0

@@ -61,9 +61,9 @@ pHaySton<-function(x,g=NA,method=NA,n.mc=10000){
   
   W.star.calc<-function(x,i,j){
     group.sizes<-l[c(i,j)]
-    W.stat<-sum(rank(c(x[g==i],x[g==j]))[(group.sizes[1]+1):sum(group.sizes)])  
+    W.stat<-sum(rank(c(x[g==levels(g)[i]],x[g==levels(g)[j]]))[(group.sizes[1]+1):sum(group.sizes)])  
     W.mean<-group.sizes[2]*(sum(group.sizes)+1)/2
-    tie.vec<-as.numeric(table(c(x[g==i],x[g==j])))
+    tie.vec<-as.numeric(table(c(x[g==levels(g)[i]],x[g==levels(g)[j]])))
     W.var<-prod(group.sizes)/24*(sum(group.sizes)+1-sum((tie.vec-1)*tie.vec*(tie.vec+1)/(sum(group.sizes)*(sum(group.sizes)-1))))
     (W.stat-W.mean)/sqrt(W.var)
   }

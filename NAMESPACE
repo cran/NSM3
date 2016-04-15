@@ -32,3 +32,9 @@ import(SemiPar)
 import(SuppDists)
 import(survival)
 import(waveslim)
+importFrom("graphics", "abline", "hist", "legend", "lines", "plot")
+importFrom("stats", "ansari.test", "complete.cases", "cor.test",
+       "dnorm", "ecdf", "integrate", "kruskal.test", "ks.test",
+       "lm", "median", "pchisq", "pexp", "pnorm", "qchisq",
+       "qnorm", "rbeta", "rexp", "runif", "splinefun", "stepfun",
+       "terms", "var", "wilcox.test")

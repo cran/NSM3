@@ -63,7 +63,7 @@ pUmbrPK<-function(x,peak=NA,g=NA,method=NA, n.mc=10000){
   A.calc<-function(obs.data){
     U.vec<-numeric((peak*(peak-1)+(k-peak+1)*(k-peak))/2)
     U.calc<-function(i,j){
-      wilcox.test(obs.data[g==i],obs.data[g==j])$statistic
+      wilcox.test(obs.data[g==levels(g)[i]],obs.data[g==levels(g)[j]])$statistic
     }
   
     count<-0
