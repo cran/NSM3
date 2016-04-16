@@ -54,7 +54,7 @@ pHaySton<-function(x,g=NA,method=NA,n.mc=10000){
   outp$labels<-character(num.comp)
   for(i in 1:(k-1)){
     for(j in (i+1):k){
-      outp$labels[count]<-paste(i,"-",j)
+      outp$labels[count]<-paste(levels(g)[i],"-",levels(g)[j])
       count<-count+1
     }
   }

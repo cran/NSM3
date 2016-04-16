@@ -57,7 +57,7 @@ pNDWol<-function(x,g=NA,method=NA, n.mc=10000){
   count<-1
   outp$labels<-character(num.comp)
   for(j in 2:k){
-    outp$labels[count]<-paste("1-",j)
+    outp$labels[count]<-paste("1-",levels(g)[j])
     count<-count+1
   }
   
