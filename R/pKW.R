@@ -32,11 +32,12 @@ pKW<-function(x,g=NA, method=NA, n.mc=10000){
   #####################
   
   
-  outp<-list()
-  outp$n<-l
-  outp$stat.name<-"Kruskal-Wallis H"
-  outp$n.mc<-n.mc
-  outp$obs.stat<-kruskal.test(x,g)$statistic
+  outp <- list()
+  outp$n <- l
+  outp$stat.name <- "Kruskal-Wallis H"
+  outp$n.mc <- n.mc
+  kw_test <- kruskal.test(x,g)
+  outp$obs.stat <- kw_test$statistic
     
   
   ##When the user doesn't give us any indication of which method to use, try to pick one.
@@ -74,7 +75,7 @@ pKW<-function(x,g=NA, method=NA, n.mc=10000){
   }  
   
   if(method=="Asymptotic"){
-    outp$p.val<-kruskal.test(x,g)$p.val  
+    outp$p.val<-kw_test$p.val  
   }
   
   

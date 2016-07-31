@@ -9,6 +9,7 @@ cHaySton<-function(alpha,n, method=NA, n.mc=10000){
   }     
   
   outp$n.mc<-n.mc
+  outp$alpha <- alpha
   
   k<-length(n)
   N<-sum(n)

@@ -8,7 +8,8 @@ cNDWol<-function(alpha,n, method=NA, n.mc=10000){
   }    
   
   
-  outp$n.mc<-n.mc  
+  outp$n.mc <- n.mc  
+  outp$alpha <- alpha
   
   l<-n
   k<-length(n)

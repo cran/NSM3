@@ -3,8 +3,6 @@ pFrd<-function(x,b=NA,trt=NA,method=NA, n.mc=10000){
   outp$stat.name<-"Friedman, Kendall-Babington Smith S"
   outp$n.mc<-n.mc  
   
-  ties<-!length(unique(as.numeric(x)))==length(x)
-  
   #If given a list, try to convert to a matrix. Each item 
   #in the list represents a column in the matrix.
   if(is.list(x)){x<-matrix(as.numeric(unlist(x)),ncol=length(x),byrow=F)}
@@ -31,8 +29,10 @@ pFrd<-function(x,b=NA,trt=NA,method=NA, n.mc=10000){
       }
     }
   }
+
+  ties <- !all(apply(x, 1, function(x)length(unique(x))) == ncol(x))
   
-  ##When the user doesn't give us any indication of which method to use, try to pick one.
+  # When the user doesn't give us any indication of which method to use, try to pick one.
   if(is.na(method)){
     if(factorial(outp$k)^outp$n<=10000){
       method<-"Exact"
@@ -41,8 +41,7 @@ pFrd<-function(x,b=NA,trt=NA,method=NA, n.mc=10000){
       method<-"Monte Carlo"
     }
   }
-  #####################################################################
-  
+
   outp$method<-method
   
   S.calc<-function(x){
@@ -57,67 +56,70 @@ pFrd<-function(x,b=NA,trt=NA,method=NA, n.mc=10000){
   if(outp$method=="Exact"){
     if(!ties){
       phi<-function(full){
-      mat<-full[,-1]
-      sort<-t(apply(mat,1,sort))
-      uniq<-unique(sort,MARGIN=1)
-      sort<-cbind(full[,1],sort)
-      counts<-numeric(nrow(uniq))
-      for(i in 1:length(counts)){
-        counts[i]<-sum(apply(sort,1,function(x,y) x[1]*identical(x[-1],y), y=uniq[i,]))
+        mat<-full[,-1]
+        sort<-t(apply(mat,1,sort))
+        uniq<-unique(sort,MARGIN=1)
+        sort<-cbind(full[,1],sort)
+        counts<-numeric(nrow(uniq))
+        for(i in 1:length(counts)){
+          counts[i]<-sum(apply(sort,1,function(x,y) x[1]*identical(x[-1],y), y=uniq[i,]))
+        }
+        return(as.matrix(cbind(counts[],uniq)))
       }
-      return(as.matrix(cbind(counts[],uniq)))
-    }
   
-    update<-function(full,original.with.ranks){
-      mat<-full[,-1]
-      original<-original.with.ranks[,-1]
-      output<-matrix(nrow=dim(original)[1]*max(nrow(full),1),ncol=min(dim(mat)[2],length(mat))+1)
-      count<-1
-      for(i in 1:max(dim(mat)[1],1)){
-        if(max(dim(mat)[1],1)==1){
-          for(j in 1:max(dim(original)[1],1)){
-            output[count,]<-c(full[1],mat+original[j,])
-            count<-count+1
+      update<-function(full,original.with.ranks){
+        mat<-full[,-1]
+        original<-original.with.ranks[,-1]
+        output<-matrix(nrow=dim(original)[1]*max(nrow(full),1),ncol=min(dim(mat)[2],length(mat))+1)
+        count<-1
+        for(i in 1:max(dim(mat)[1],1)){
+          if(max(dim(mat)[1],1)==1){
+            for(j in 1:max(dim(original)[1],1)){
+              output[count,]<-c(full[1],mat+original[j,])
+              count<-count+1
+            }
+          }
+          if(max(dim(mat)[1],1)!=1){
+            for(j in 1:max(dim(original)[1],1)){
+              output[count,]<-c(full[i,1],mat[i,]+original[j,])	
+              count<-count+1
+            }
           }
         }
-        if(max(dim(mat)[1],1)!=1){
-          for(j in 1:max(dim(original)[1],1)){
-            output[count,]<-c(full[i,1],mat[i,]+original[j,])	
-            count<-count+1
-          }
-        }
+        return(output)
       }
-      return(output)
-    }
 
-    exact.friedman.dist<-function(k,n,STATISTIC){
-      initial<-cbind(rep(1,factorial(k)),multComb(rep(1,k)))
-      if(nrow(initial)!=factorial(k)){
-        return("Error!")
+      exact.friedman.dist<-function(k,n,STATISTIC){
+        initial<-cbind(rep(1,factorial(k)),multComb(rep(1,k)))
+        if(nrow(initial)!=factorial(k)){
+          return("Error!")
+        }
+        new<-update(phi(initial),initial)
+        for(i in 1:(n-2)){
+          new<-phi(update(new,initial))
+        }
+    
+        sum.squares<-apply(new[,-1]^2,1,sum)
+        statistic<-round(12/(n*k*(k+1))*sum.squares-3*n*(k+1),4)
+        test.dist<-cbind(new[,1]/sum(new[,1]),statistic)
+        p.value<-sum(test.dist[statistic>=STATISTIC,1])
+        return(p.value)
       }
-      new<-update(phi(initial),initial)
-      for(i in 1:(n-2)){
-        new<-phi(update(new,initial))
+  
+      outp$p.val<-exact.friedman.dist(outp$k,outp$n,outp$obs.stat)
+    } else{
+      matrix_attempt <- suppressWarnings(try(multCh7(possible.ranks), silent = TRUE))
+      if(inherits(matrix_attempt, "try-error")){
+        stop("Dimensions of x are too large for exact computations in the presence of ties. Please use method='Monte Carlo' instead.")
+      } else{
+        possible.perm <- matrix_attempt
+        exact.dist<-numeric(factorial(outp$k)^outp$n)
+        for(i in 1:(factorial(outp$k)^outp$n)){
+          exact.dist[i]<-S.calc(possible.perm[,,i])
+        }
+        outp$p.val<-mean(exact.dist>=outp$obs.stat)      
       }
-  
-      sum.squares<-apply(new[,-1]^2,1,sum)
-      statistic<-round(12/(n*k*(k+1))*sum.squares-3*n*(k+1),4)
-      test.dist<-cbind(new[,1]/sum(new[,1]),statistic)
-      p.value<-sum(test.dist[statistic>=STATISTIC,1])
-      return(p.value)
     }
-  
-    outp$p.val<-exact.friedman.dist(outp$k,outp$n,outp$obs.stat)
-  }
-  
-  if(ties){
-    possible.perm<-multCh7(possible.ranks)
-    exact.dist<-numeric(factorial(outp$k)^outp$n)
-    for(i in 1:(factorial(outp$k)^outp$n)){
-      exact.dist[i]<-S.calc(possible.perm[,,i])
-    }
-    outp$p.val<-mean(exact.dist>=outp$obs.stat)      
-  }
   }
 
   if(outp$method=="Monte Carlo"){
@@ -130,9 +132,7 @@ pFrd<-function(x,b=NA,trt=NA,method=NA, n.mc=10000){
       mc.stats[i]<-S.calc(mc.perm)
     }
     
-    mc.vals<-sort(unique(mc.stats))
-    mc.dist<-as.numeric(table(mc.stats))/n.mc
-    outp$p.val<-mean(mc.dist>=outp$obs.stat) 
+    outp$p.val<-mean(mc.stats>=outp$obs.stat)
   }
   
   if(outp$method=="Asymptotic"){
