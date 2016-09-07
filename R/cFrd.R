@@ -1,8 +1,7 @@
-cFrd<-function(alpha, k, n, method=NA, n.mc=10000){
+cFrd<-function(alpha, k, n, method=NA, n.mc=10000, return.full.distribution=FALSE){
   outp<-list()
   outp$stat.name<-"Friedman, Kendall-Babington Smith S"
   outp$n.mc<-n.mc  
-  
   
   if(alpha>1||alpha<0||class(alpha)!="numeric"){
     cat('Error: Check alpha value! \n')
@@ -96,6 +95,9 @@ cFrd<-function(alpha, k, n, method=NA, n.mc=10000){
       upper.tails<-cbind(rev(S.dist[,1]),cumsum(rev(S.dist[,2])))
       outp$cutoff.U<-upper.tails[max(which(upper.tails[,2]<=alpha)),1]
       outp$true.alpha.U<-upper.tails[max(which(upper.tails[,2]<=alpha)),2]  
+      if(return.full.distribution){
+        outp$full.distribution <- S.dist
+      }
   }
 
 if(outp$method=="Monte Carlo"){
@@ -114,7 +116,9 @@ if(outp$method=="Monte Carlo"){
   upper.tails<-cbind(rev(mc.vals),cumsum(rev(mc.dist)))
   outp$cutoff.U<-upper.tails[max(which(upper.tails[,2]<=alpha)),1]
   outp$true.alpha.U<-upper.tails[max(which(upper.tails[,2]<=alpha)),2]
-  
+  if(return.full.distribution){
+    outp$full.distribution <- cbind(mc.vals, mc.dist)
+  }
 }
 
 if(outp$method=="Asymptotic"){

@@ -1,4 +1,4 @@
-562c1ee9d3ec7f15aec04974feb136c9 *DESCRIPTION
+a8af450a309d08b61fa643b88077ef30 *DESCRIPTION
 a1c5120332155f26f5604f45e1b8b15b *NAMESPACE
 40033ce5c54a236d936c2fc5dbae3fb5 *R/CorrUpperBound.R
 aead07cf6fc276543f2d9d70ff2ab57a *R/HoeffD.R
@@ -11,7 +11,7 @@ eb192973f9ae89ddc4b61e947e819d9d *R/RFPW.R
 5aa9d9e4b0fd87f87fdff88897139e91 *R/cBohnWolfe.R
 ffb497d9d4e41f86d4789dd02102a338 *R/cDurSkiMa.R
 bbff1a4eac4364542d8c558c5f72e446 *R/cFligPoli.R
-cc8ef5ac493b990ae4dc0d7d4098a35f *R/cFrd.R
+ac6741be077e1d9aebf728f01a0ce3ec *R/cFrd.R
 759a9140adf335b086eb2911729fbbff *R/cHaySton.R
 862f7737a401578e36adaea9193d85b8 *R/cHayStonLSA.R
 9e1ed77e22225a8928d8933b05608f82 *R/cHollBivSym.R
@@ -189,7 +189,7 @@ e3f050b87ccc4286deb490714b773141 *man/HoeffD.Rd
 dbf94c7fb3a7608aa97944bd2efa9cfa *man/cBohnWolfe.Rd
 ba87258a1c9d3156d2106a68549c3a55 *man/cDurSkiMa.Rd
 db59905df37774078d1d01903f9368bf *man/cFligPoli.Rd
-fc55ae1139799bace9a7ad62ef9eeac5 *man/cFrd.Rd
+687dcc381db5ebeca26d00fc7c4924cb *man/cFrd.Rd
 ba0b8dc0701cc7b25d871b05ec2057dd *man/cHaySton.Rd
 f95603c564e7a6cec8559b504698b098 *man/cHayStonLSA.Rd
 287e0ac9b9cfb1cbfd19cf34d8279fbf *man/cHollBivSym.Rd
