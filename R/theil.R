@@ -69,7 +69,7 @@ theil<-function (x = NULL, y = NULL, alpha = 0.05, beta.0 = 0, type = "t", examp
          C.bar <- CC/choose(n, 2)
          if (type == "t") {
              p <- 2 * pKendall(-abs(C.bar), N = n, lower.tail = T)
-             null.dir <- " not equal to "
+             null.dir <- " equal to "
          }
          if (type == "l") {
              p <- pKendall(C.bar, N = n, lower.tail = T)
