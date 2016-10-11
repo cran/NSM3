@@ -69,7 +69,7 @@ theil<-function (x = NULL, y = NULL, alpha = 0.05, beta.0 = 0, type = "t", examp
          C.bar <- CC/choose(n, 2)
          if (type == "t") {
              p <- 2 * pKendall(-abs(C.bar), N = n, lower.tail = T)
-             null.dir <- " equal to "
+             null.dir <- " not equal to "
          }
          if (type == "l") {
              p <- pKendall(C.bar, N = n, lower.tail = T)
@@ -80,7 +80,7 @@ theil<-function (x = NULL, y = NULL, alpha = 0.05, beta.0 = 0, type = "t", examp
              null.dir <- " greater than "
          }
          cat("\n")
-         cat(paste("Null: beta", null.dir, beta.0, sep = ""))
+         cat(paste("Alternative: beta", null.dir, beta.0, sep = "")) 
          cat("\n")
          cat(paste("C = ", round(CC, r), ", C.bar = ", round(C.bar,
              r), ", P = ", round(p, r), sep = ""))
