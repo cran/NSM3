@@ -1,5 +1,5 @@
 exportPattern("^[[:alpha:]]+")
-useDynLib("NSM3")
+useDynLib("NSM3", .registration = TRUE)
 S3method(print,NSM3Ch5c)
 S3method(print,NSM3Ch5p)
 S3method(print,NSM3Ch6c)

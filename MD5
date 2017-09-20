@@ -1,5 +1,5 @@
-9902a4d5e2483b33c466d07a55de8d92 *DESCRIPTION
-a1c5120332155f26f5604f45e1b8b15b *NAMESPACE
+04643fe292d31ec19bedddd908adc118 *DESCRIPTION
+8f444d65799c1faf0bf654cf3ff29eb2 *NAMESPACE
 40033ce5c54a236d936c2fc5dbae3fb5 *R/CorrUpperBound.R
 aead07cf6fc276543f2d9d70ff2ab57a *R/HoeffD.R
 bd230f9cfc3cd4fd2421713ca88af1ce *R/HollBivSym.R
@@ -70,7 +70,7 @@ ccacf0826fe8109a9591b0eee0ed9ae9 *R/pHollBivSym.R
 8f8aaf2f9def5c28468bf2a77bc27c7f *R/pNWWM.R
 067b648915c51e2711aca9896b114edf *R/pPage.R
 a2da910733ee8c654f0828e9f4e62c2c *R/pPairedWilcoxon.R
-fc7e857bd3c38b1b1caaf8d63bbc8431 *R/pRangeNor.R
+8516bb6b5b56df3eae2ff35ffb27941a *R/pRangeNor.R
 170a83c319ae7f74042c46d55cad4dbc *R/pSDCFlig.R
 028303f30a5ff07ecc5c9fddcd9ec80c *R/pSkilMack.R
 5e8c83388237d7c1906ee08e24f80c40 *R/pUmbrPK.R
@@ -263,4 +263,5 @@ f29b13cb590ed7da8ec1b0d92fdee4d2 *man/theil.Rd
 b029c77045c0474f3097a6e33b4146f7 *man/zelen.test.Rd
 48429176c9e2003568639e1be42aa2e9 *src/ansari.c
 5dda88ac914a65b1f5ec7a428f7386c9 *src/ks.c
+8671aaa13492fa9f961da7d4fbf1fe7e *src/registerDynamicSymbol.c
 c0457e9e6b52c8e635e776e5e595f4fe *src/stats.h
