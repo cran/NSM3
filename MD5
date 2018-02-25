@@ -1,5 +1,5 @@
-04643fe292d31ec19bedddd908adc118 *DESCRIPTION
-8f444d65799c1faf0bf654cf3ff29eb2 *NAMESPACE
+abebf51421eb1fe22a2339fbfec15fa0 *DESCRIPTION
+a0d8229a1585a910b3ebaf6d0519ceae *NAMESPACE
 40033ce5c54a236d936c2fc5dbae3fb5 *R/CorrUpperBound.R
 aead07cf6fc276543f2d9d70ff2ab57a *R/HoeffD.R
 bd230f9cfc3cd4fd2421713ca88af1ce *R/HollBivSym.R
@@ -86,11 +86,12 @@ bb13746e29a231aac93f1fbf9fc6f171 *R/print.NSM3Ch7MCc.R
 7bd2f6a225dbf5ba0120edaf8a22d0a5 *R/print.NSM3Ch7MCp.R
 e748ae9e4b103971fba159a157086e2e *R/print.NSM3Ch7c.R
 98cbb9b45ff702b363c79732496d8791 *R/print.NSM3Ch7p.R
+b5fe4cec15e7a59f6a3b9ca6e406bb37 *R/print.NSM3Ch9ChickFn.R
 c2e2ca2797dbbe55c9da48bd08b3d217 *R/qKolSmirnLSA.R
 b52f2d3aa874f5f6049d8054c173ef9e *R/sen.adichie.R
 a8cbca1f0e40a976af0b472fc2993016 *R/svr.df.R
 619b8d4855ca0a934d82f561048e36e5 *R/tc.R
-5d0a1475789bdeb5cae463e535e067c8 *R/theil.R
+9b14f52019985e9c9cf6ec6a6db6c974 *R/theil.R
 674fd74d6ae663a0969db30546c527d6 *R/zelen.test.R
 34d65d9227818cc4be12df0384007932 *data/JASA1994.rda
 430ce4d7a624ae197c14bb4ea2dfe107 *data/JASA1995.rda
@@ -253,13 +254,13 @@ c88fe8479d75b38e3bc1bdad1712d778 *man/pRangeNor.Rd
 977d71f5fc876fbc87fe59beaaae44d8 *man/pUmbrPK.Rd
 ea22bf0e0a551e4488ce1fb29ce771a2 *man/pUmbrPU.Rd
 44d21d898fac94b9425b9dd80054ab6a *man/pWNMT.Rd
-9507ccbceba32458072cece042cb05d1 *man/print.NSM3Ch5c.Rd
+2c5f25a73a5d88e12a33f891d02523de *man/print.NSM3Ch5c.Rd
 fbfda405186cff06423699722e8caaff *man/qKolSmirnLSA.Rd
 ffbf66a87dc71eccf042be95e325a682 *man/rhythmicity.Rd
 7569e78c4c95363f93db8f84eaa1d9a3 *man/sen.adichie.Rd
 0b2304b1a752cd4ee12f7e1b7fb18165 *man/svr.df.Rd
 c8e8741b68cc28384ee0e2c7918c03ed *man/tc.Rd
-f29b13cb590ed7da8ec1b0d92fdee4d2 *man/theil.Rd
+db8f224173b6c4789b2f4c1248d9736d *man/theil.Rd
 b029c77045c0474f3097a6e33b4146f7 *man/zelen.test.Rd
 48429176c9e2003568639e1be42aa2e9 *src/ansari.c
 5dda88ac914a65b1f5ec7a428f7386c9 *src/ks.c

@@ -21,6 +21,25 @@ theil(x=NULL, y=NULL, alpha=0.05, beta.0=0, type="t",
  \item{slopes}{if true, will print all n(n-1)/2 slopes}
  \item{doplot}{if true, will plot the data and estimated line}
 }
+\value{
+Returns a list with "NSM3Ch9ChickFn" class containing the following components:
+
+\item{alpha}{same as input argument}
+\item{beta.0}{same as input argument}
+\item{type}{same as input argument}
+\item{r}{same as input argument}
+\item{slopes}{same as input argument}
+\item{C.stat}{the observed C statistic}
+\item{C.bar}{the observed C.bar statistic}
+\item{alpha.hat}{the observed alpha.hat statistic}
+\item{beta.hat}{the observed beta.hat statistic}
+\item{slopes.table}{table containing all n(n-1)/2}
+\item{p.val}{the P-value corresponding to the selected type of test/confidence interval}
+\item{L}{the lower endpoint of the confidence interval}
+\item{U}{the upper endpoint of the confidence interval}
+
+}
+
 \author{
 Eric Chicken
 }

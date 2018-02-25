@@ -9,6 +9,7 @@
 \alias{print.NSM3Ch6MCc}
 \alias{print.NSM3Ch7MCp}
 \alias{print.NSM3Ch7MCc}
+\alias{print.NSM3Ch9ChickFn}
 
 \title{
 Methods to control displayed output of NSM3 tests.

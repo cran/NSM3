@@ -16,6 +16,7 @@ theil<-function (x = NULL, y = NULL, alpha = 0.05, beta.0 = 0, type = "t", examp
   # Set slopes=T to print all n(n-1)/2 slopes.
   #
   # Inefficiently programmed by Eric Chicken, October 2012.
+  # Small updates by Grant Schneider, February 2018
   
   # Example 9.1 from HW&C
      if (example) {
@@ -52,64 +53,40 @@ theil<-function (x = NULL, y = NULL, alpha = 0.05, beta.0 = 0, type = "t", examp
      if (continue) {
          D.i <- numeric(0)
          n <- length(x)
+         # Sort based on x in case this hasn't been done already
+         y <- y[order(x)]
+         x <- x[order(x)]
          for (i in 1:n) D.i <- c(D.i, (y[i] - beta.0 * x[i]))
-         CC <- 0
+         C.stat <- 0
          S.ij <- slopes.table <- numeric(0)
          for (i in 1:(n - 1)) for (j in (i + 1):n) {
              if (D.i[j] < D.i[i])
-                 CC <- CC - 1
+                 C.stat <- C.stat - 1
              if (D.i[j] > D.i[i])
-                 CC <- CC + 1
+                 C.stat <- C.stat + 1
              S.ij <- c(S.ij, (y[j] - y[i])/(x[j] - x[i]))
              slopes.table <- rbind(slopes.table, c(i, j))
          }
+         beta.hat <- median(S.ij)
+         alpha.hat <- median(y - beta.hat * x)
          slopes.table <- cbind(slopes.table, S.ij)
          colnames(slopes.table) <- c("i", "j", "S.ij")
          rownames(slopes.table) <- rep("", choose(n, 2))
-         C.bar <- CC/choose(n, 2)
+         C.bar <- C.stat/choose(n, 2)
+
          if (type == "t") {
-             p <- 2 * pKendall(-abs(C.bar), N = n, lower.tail = T)
-             null.dir <- " not equal to "
+           a <- alpha/2
+           p.val <- 2 * pKendall(-abs(C.bar), N = n, lower.tail = T)
          }
          if (type == "l") {
-             p <- pKendall(C.bar, N = n, lower.tail = T)
-             null.dir <- " less than "
+           a <- alpha
+           p.val <- pKendall(C.bar, N = n, lower.tail = T)
          }
          if (type == "u") {
-             p <- pKendall(-C.bar, N = n, lower.tail = T)
-             null.dir <- " greater than "
+           a <- alpha
+           p.val <- pKendall(-C.bar, N = n, lower.tail = T)
          }
-         cat("\n")
-         cat(paste("Alternative: beta", null.dir, beta.0, sep = "")) 
-         cat("\n")
-         cat(paste("C = ", round(CC, r), ", C.bar = ", round(C.bar,
-             r), ", P = ", round(p, r), sep = ""))
-         cat("\n")
-         beta.hat <- median(S.ij)
-         cat(paste("beta.hat = ", round(beta.hat, r), sep = ""))
-         cat("\n")
-         alpha.hat <- median(y - beta.hat * x)
-         cat(paste("alpha.hat = ", round(alpha.hat, r), sep = ""))
-         cat("\n")
-         if (slopes) {
-             cat("\n")
-             cat("All slopes:")
-             cat("\n")
-             print(slopes.table)
-             cat("\n")
-         }
-         if (type == "t") {
-             a <- alpha/2
-             print.type <- " two-sided CI for beta:"
-         }
-         if (type == "l") {
-             a <- alpha
-             print.type <- " lower bound for beta:"
-         }
-         if (type == "u") {
-             a <- alpha
-             print.type <- " upper bound for beta:"
-         }
+         
          C.alpha <- qKendall(a, N = n, lower.tail = T)
          if (pKendall(C.alpha, n) > a)
              C.alpha <- C.alpha - 2/choose(n, 2)
@@ -122,15 +99,30 @@ theil<-function (x = NULL, y = NULL, alpha = 0.05, beta.0 = 0, type = "t", examp
              U <- Inf
          if (type == "u")
              L <- -Inf
-         cat("\n")
-         cat(paste("1 - alpha = ", 1 - alpha, print.type, sep = ""))
-         cat("\n")
-         cat(paste(L, ", ", U, sep = ""), "\n")
-         cat("\n")
          if (doplot) {
              plot(x, y, xlab = "", ylab = "")
              abline(alpha.hat, beta.hat)
          }
      }
+     
+     outp<-list()
+
+     outp$stat.name <- "Theil C"
+     outp$type <- type
+     outp$alpha <- alpha
+     outp$slopes <- slopes
+     outp$r <- r
+     outp$beta.0 <- beta.0
+
+     outp$p.val <- p.val     
+     outp$slopes.table <- slopes.table
+     outp$C.stat <- C.stat
+     outp$C.bar <- C.bar
+     outp$alpha.hat <- alpha.hat
+     outp$beta.hat <- beta.hat
+     outp$L <- L
+     outp$U <- U
+     class(outp)<-"NSM3Ch9ChickFn"
+     outp
 }
 
