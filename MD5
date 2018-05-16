@@ -1,4 +1,4 @@
-abebf51421eb1fe22a2339fbfec15fa0 *DESCRIPTION
+f1faa7470dde6de6b65db6e6b1dc213f *DESCRIPTION
 a0d8229a1585a910b3ebaf6d0519ceae *NAMESPACE
 40033ce5c54a236d936c2fc5dbae3fb5 *R/CorrUpperBound.R
 aead07cf6fc276543f2d9d70ff2ab57a *R/HoeffD.R
@@ -183,7 +183,6 @@ a41caed174af7e0ad24fe4a1f2a10cd9 *man/CorrUpperBound.Rd
 e3f050b87ccc4286deb490714b773141 *man/HoeffD.Rd
 3a2d5ddb863c317a4aabbfd7ae08eba7 *man/HollBivSym.Rd
 48220e1987d3cb91c90d1957449c50e2 *man/MillerJack.Rd
-481400958aea105ddbcad98f004ebb7b *man/NSM3-package.Rd
 80b83919bb56f6b74e1201090fb9f993 *man/RFPW.Rd
 17af41b71513a7dba2f74e1bf8044c13 *man/RSS.Rd
 211d280c7487b42bf2d3573a17253e8b *man/cAnsBrad.Rd
