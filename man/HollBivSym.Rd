@@ -7,7 +7,7 @@ Hollander Bivariate Symmetry
 Function to compute the Hollander A statistic for testing bivariate symmetry.
 }
 \usage{
-HollBivSym(x,y=NA)
+HollBivSym(x,y=NULL)
 }
 \arguments{
   \item{x}{Either a matrix containing both groups of data or a vector containing the first group of data.

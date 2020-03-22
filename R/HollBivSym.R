@@ -1,6 +1,6 @@
-HollBivSym<-function(x,y=NA){
+HollBivSym<-function(x,y=NULL){
 	check<-0
-	if((is.null(ncol(x))||ncol(x)==1)&&!is.na(y)){
+	if((is.null(ncol(x))||ncol(x)==1)&&!is.null(y)){
 		check=1
 	}
 

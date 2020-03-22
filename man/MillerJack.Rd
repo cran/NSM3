@@ -7,7 +7,7 @@ Miller Jackknife
 Function to compute the Miller Jackknife Q statistic.
 }
 \usage{
-MillerJack(x,y=NA)
+MillerJack(x,y=NULL)
 }
 \arguments{
   \item{x}{Either a vector containing the first group of data (X) or a matrix containing both groups of data.

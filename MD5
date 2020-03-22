@@ -1,10 +1,9 @@
-f1faa7470dde6de6b65db6e6b1dc213f *DESCRIPTION
-a0d8229a1585a910b3ebaf6d0519ceae *NAMESPACE
+a6da7c1d12572f3e0295ee9a1d59b94e *DESCRIPTION
+31ed1b061b463e0ad4cc200566085b00 *NAMESPACE
 40033ce5c54a236d936c2fc5dbae3fb5 *R/CorrUpperBound.R
 aead07cf6fc276543f2d9d70ff2ab57a *R/HoeffD.R
-bd230f9cfc3cd4fd2421713ca88af1ce *R/HollBivSym.R
-d3110e596007bf06feab51cdf17b8d93 *R/MillerJack.R
-9cf12fd193a5395cb3d6ca4aaded32a3 *R/NSM3-internal.R
+fb3baf162bf3676ad000c958a4dda0da *R/HollBivSym.R
+547d05fdbb2359cf87542e194aef5ea2 *R/MillerJack.R
 eb192973f9ae89ddc4b61e947e819d9d *R/RFPW.R
 2da5ef0caa2e3280f983dc121cbc7db2 *R/RSS.R
 0a70d268647e272e2d898073df0da8d8 *R/cAnsBrad.R
@@ -181,8 +180,8 @@ e9fae9a72b7330bf106b3b008a85b986 *data/velocity.rda
 a3785aac2e4b6a2b18a8cebd2b452689 *data/wechsler.rda
 a41caed174af7e0ad24fe4a1f2a10cd9 *man/CorrUpperBound.Rd
 e3f050b87ccc4286deb490714b773141 *man/HoeffD.Rd
-3a2d5ddb863c317a4aabbfd7ae08eba7 *man/HollBivSym.Rd
-48220e1987d3cb91c90d1957449c50e2 *man/MillerJack.Rd
+f0511ef647c4052e1a33588a2de01d84 *man/HollBivSym.Rd
+84e0b996020279d6c20918e62ec68b1e *man/MillerJack.Rd
 80b83919bb56f6b74e1201090fb9f993 *man/RFPW.Rd
 17af41b71513a7dba2f74e1bf8044c13 *man/RSS.Rd
 211d280c7487b42bf2d3573a17253e8b *man/cAnsBrad.Rd

@@ -1,7 +1,7 @@
 MillerJack <-
-function(x,y=NA){
+function(x,y=NULL){
 check<-0
-	if((is.null(ncol(x))||ncol(x)==1)&&!is.na(y)){
+	if((is.null(ncol(x))||ncol(x)==1)&&!is.null(y)){
 		check=1
 	}
 	if(max(dim(x)[2],1)==2){
