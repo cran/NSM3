@@ -8,7 +8,6 @@ epstein<-function (x, alternative = "two.sided",exact=FALSE)
   
   # If exact == FALSE, then the large sample approximation will be used if n>=9
   
-  
   p.sum.unif= function (x,n) 
   {
     # Finds the probability of the sum of n uniform(0,1) r.v.'s
@@ -22,13 +21,11 @@ epstein<-function (x, alternative = "two.sided",exact=FALSE)
     
   }
   
-  
   # The next three lines are modified from fisher.test to get the correct alternative
   # hypotheses.  Citation needed?
   alternative <- char.expand(alternative, c("two.sided", "dfr", "ifr"))
   if (length(alternative) > 1L || is.na(alternative)) 
     stop("alternative must be \"two.sided\", \"dfr\" or \"ifr\"")
-  
   
   x.ord = sort(x) #ordered values
   n = length(x)
@@ -46,19 +43,12 @@ epstein<-function (x, alternative = "two.sided",exact=FALSE)
     if(exact==FALSE){
       E.star = (E-((n-1)/2))/sqrt((n-1)/12)
       
-      #dfr
       if(alternative=="dfr"){
         p=pnorm(E.star)
-      }
-      
-      #ifr
-      if(alternative=="ifr"){
+      } else if(alternative=="ifr"){
         p=pnorm(E.star, lower.tail=F)
-      }
-      
-      #not equal 
-      if(alternative=="two.sided"){
-        p=2*pnorm(E.star, lower.tail=F)
+      } else if(alternative=="two.sided"){
+        p=2*pnorm(abs(E.star), lower.tail=FALSE)
       }
       cat("E*=", E.star, "\n", "p=", p,"\n")
       return(list(E=E.star,prob=p))
@@ -66,19 +56,12 @@ epstein<-function (x, alternative = "two.sided",exact=FALSE)
   }
   
   # Exact Test
-  #dfr 
   if(alternative=="dfr"){
-    p=1-p.sum.unif(((n-1)/2)-E,n-1)
-  }
-  
-  #ifr 
-  if(alternative=="ifr"){
+    p=1-p.sum.unif(n-1-E,n-1)
+  }else if(alternative=="ifr"){
     p=1-p.sum.unif(E,n-1)
-  }
-  
-  #not equal 
-  if(alternative=="two.sided"){
-    p=2*min(1-p.sum.unif(((n-1)/2)-E,n-1),1-p.sum.unif(E,n-1))
+  } else if(alternative=="two.sided"){
+    p=2*min(1-p.sum.unif(n-1-E,n-1),1-p.sum.unif(E,n-1))
   }
   cat("E=", E, "\n", "p=", p,"\n")
   return(list(E=E,p=p))

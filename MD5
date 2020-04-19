@@ -1,4 +1,4 @@
-a6da7c1d12572f3e0295ee9a1d59b94e *DESCRIPTION
+edc1f56260687b2d9a5089edb972c6ca *DESCRIPTION
 31ed1b061b463e0ad4cc200566085b00 *NAMESPACE
 40033ce5c54a236d936c2fc5dbae3fb5 *R/CorrUpperBound.R
 aead07cf6fc276543f2d9d70ff2ab57a *R/HoeffD.R
@@ -31,9 +31,9 @@ cac2693092c52bc688d0a95132d56b88 *R/cSDCFlig.R
 884d2ab8e2f21dd9ea716d947a71d956 *R/cWNMT.R
 17b439855796227f8685fe6ad931c92f *R/ch.ro.R
 c93dbf6f1ac9a1564f81762463c204fe *R/dmrl.mc.R
-8686ac89584e078b54d5db68e79caefc *R/e.mc.R
+16089bd327eb0f0985a8b15bf9a89e3d *R/e.mc.R
 e7cfc4239af48d696c5a54d8a2f50ecd *R/ecdf.ks.CI.R
-6fa6e1e01bed8b87bb5ad72cb5289714 *R/epstein.R
+4f8efc7a020ba131afcc5bc9a3667a06 *R/epstein.R
 cecb4a889db192c217d4e98464602b90 *R/ferg.df.R
 56134507ec9aef5fc4926a2ac14b026d *R/kendall.ci.R
 6712abb9be8ab0e676f8597a8ebc3956 *R/klefsjo.ifr.R
@@ -209,7 +209,7 @@ c9bdbe7de29365913d8d89f33c6453fc *man/cUmbrPK.Rd
 2cefe943f2b0fca438f3e7363087432e *man/cWNMT.Rd
 c98b1d9e4a342c8ccffb2ca4d713ffea *man/ch.ro.Rd
 fc4428a5aaec9cb734a35aca2309b46b *man/dmrl.mc.Rd
-f0a44890a86e253968ad5efd0099e1b0 *man/e.mc.Rd
+734668384ca71de002f4d747c2c5023e *man/e.mc.Rd
 a1ac802de805b0e4d6641bd46e119c0b *man/ecdf.ks.CI.Rd
 6592b526e707ce88aa5b8a645e277d35 *man/epstein.Rd
 92c09d9ad6200b70ffce7cd97aabfe72 *man/ferg.df.Rd

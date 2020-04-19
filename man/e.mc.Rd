@@ -8,7 +8,7 @@ This is the Monte Carlo approximation to the function "epstein".
 }
 \usage{
 e.mc(x, alternative = "two.sided", exact=FALSE,
-     min.reps = 100, max.reps = 1000, delta = 10^-3)
+     min.reps = 1000, max.reps = 10000, delta = 10^-4)
 }
 \arguments{
   \item{x}{a vector of data of length n}

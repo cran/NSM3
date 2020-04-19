@@ -1,4 +1,4 @@
-e.mc<-function (x, alternative = "two.sided",exact=FALSE, min.reps=100, max.reps=1000, delta=10^-3) 
+e.mc<-function (x, alternative = "two.sided",exact=FALSE, min.reps=1000, max.reps=10000, delta=10^-4) 
 {
   # 11.1. A Test of Exponentiality versus IFR Alternatives (Epstein)
   # Monte Carlo Version for the exact test.  
@@ -44,8 +44,7 @@ e.mc<-function (x, alternative = "two.sided",exact=FALSE, min.reps=100, max.reps
     return(p)
     
   }
-  
-  
+
   # The next three lines are modified from fisher.test to get the correct alternative
   # hypotheses.  Citation needed?
   alternative <- char.expand(alternative, c("two.sided", "dfr", "ifr"))
@@ -60,19 +59,12 @@ e.mc<-function (x, alternative = "two.sided",exact=FALSE, min.reps=100, max.reps
     if(exact==FALSE){
       E.star = (E-((n-1)/2))/sqrt((n-1)/12)
       
-      #dfr
       if(alternative=="dfr"){
         p=pnorm(E.star)
-      }
-      
-      #ifr
-      if(alternative=="ifr"){
+      } else if(alternative=="ifr"){
         p=pnorm(E.star, lower.tail=F)
-      }
-      
-      #not equal 
-      if(alternative=="two.sided"){
-        p=2*pnorm(E.star, lower.tail=F)
+      } else if(alternative=="two.sided"){
+        p=2*pnorm(abs(E.star), lower.tail=FALSE)
       }
       cat("E*=", E.star, "\n", "p=", p,"\n")
       return(list(E=E.star,prob=p))
@@ -80,19 +72,12 @@ e.mc<-function (x, alternative = "two.sided",exact=FALSE, min.reps=100, max.reps
   }
   
   # Exact Test
-  #dfr 
   if(alternative=="dfr"){
-    p=p.mc(((n-1)/2)-E,n-1, min.reps=min.reps, max.reps=max.reps, delta=delta)
-  }
-  
-  #ifr 
-  if(alternative=="ifr"){
+    p=p.mc(n-1-E,n-1, min.reps=min.reps, max.reps=max.reps, delta=delta)
+  } else if(alternative=="ifr"){
     p=p.mc(E,n-1,min.reps=min.reps, max.reps=max.reps, delta=delta)
-  }
-  
-  #not equal 
-  if(alternative=="two.sided"){
-    p=2*min(p.mc(((n-1)/2)-E,n-1,min.reps=min.reps, max.reps=max.reps, delta=delta),
+  } else if(alternative=="two.sided"){
+    p=2*min(p.mc(n-1-E,n-1,min.reps=min.reps, max.reps=max.reps, delta=delta),
             p.mc(E,n-1,min.reps=min.reps, max.reps=max.reps, delta=delta))
   }
   cat("E=", E, "\n", "p=", p,"\n")
