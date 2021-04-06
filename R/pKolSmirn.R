@@ -54,8 +54,8 @@ function(x,y=NA,g=NA,method=NA,n.mc=10000){
 	d<-gcd(outp$m,outp$n)
 	
   tmp.ks1<-ks.test(x,y)
-	outp$obs.stat<-as.numeric(tmp.ks1$statistic)*d
-
+	outp$obs.stat<-as.numeric(tmp.ks1$statistic)*outp$m*outp$n/d
+	
 	if(outp$method=="Monte Carlo"){
 		warning("The exact computation will work for large data, so Monte Carlo methods
 				are not recommended for this procedure.")

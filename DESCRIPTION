@@ -1,7 +1,7 @@
 Package: NSM3
 Type: Package
-Version: 1.15
-Date: 2020-08-31
+Version: 1.16
+Date: 2021-04-05
 Title: Functions and Datasets to Accompany Hollander, Wolfe, and
         Chicken - Nonparametric Statistical Methods, Third Edition
 Author: Grant Schneider, Eric Chicken, Rachel Becvarik
@@ -15,5 +15,5 @@ Imports: agricolae, ash, binom, BSDA, coin, fANCOVA, gtools, Hmisc,
         SuppDists, waveslim
 NeedsCompilation: yes
 Repository: CRAN
-Packaged: 2020-08-31 14:47:46 UTC; grant
-Date/Publication: 2020-08-31 20:50:08 UTC
+Packaged: 2021-04-06 14:36:40 UTC; grant
+Date/Publication: 2021-04-06 16:20:14 UTC
