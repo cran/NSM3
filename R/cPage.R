@@ -4,7 +4,7 @@ cPage<-function(alpha, k, n, method=NA, n.mc=10000){
   outp$n.mc<-n.mc  
   
   
-  if(alpha>1||alpha<0||class(alpha)!="numeric"){
+  if(alpha>1||alpha<0||!is.numeric(alpha)){
     cat('Error: Check alpha value! \n')
     return(alpha)
   }     

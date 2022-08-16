@@ -7,18 +7,19 @@ Wilcoxon, Nemenyi, McDonald-Thompson
 Function to compute the P-value for the observed Wilcoxon, Nemenyi, McDonald-Thompson R statistic.
 }
 \usage{
-pWNMT(x,b=NA,trt=NA,method=NA, n.mc=10000)
+pWNMT(x,b=NA,trt=NA,method=NA, n.mc=10000, standardized=FALSE)
 }
 \arguments{
   \item{x}{Either a matrix or a vector containing the data.}
   \item{b}{If x is a vector, b is a required vector of block labels. Otherwise, not used.}
   \item{trt}{If x is a vector, trt is a required vector of treatment labels. Otherwise, not used.}
-  \item{method}{Either "Exact", "Monte Carlo" or "Asymptotic", indicating the desired distribution. When method=NA, "Exact" will be used if the number of permutations is 10,000 or less. Otherwise, "Monte Carlo" will be used.
+  \item{method}{Either "Exact", "Monte Carlo" or "Asymptotic", indicating the desired distribution. When method=NA, "Exact" will be used if the number of permutations is 10,000 or less. Otherwise, "Monte Carlo" will be used.}
+  \item{n.mc}{
+    If method="Monte Carlo", the number of Monte Carlo samples used to estimate the distribution. Otherwise, not used.
+  }
+  \item{standardized}{If TRUE, divide the observed statistic by (nk(k+1)/12)^0.5 before returning.}
 }
-\item{n.mc}{
-  If method="Monte Carlo", the number of Monte Carlo samples used to estimate the distribution. Otherwise, not used.
-}
-}
+
 \details{
 The data entry is intended to be flexible, so that the data can be entered in either of two ways. The following are equivalent:
 \code{pWNMT(x=matrix(c(1,2,3,4,5,6),ncol=2,byrow=T))}

@@ -1,6 +1,11 @@
-pWNMT<-function(x,b=NA,trt=NA,method=NA, n.mc=10000){
+pWNMT<-function(x,b=NA,trt=NA,method=NA, n.mc=10000, standardized=FALSE){
   outp<-list()
-  outp$stat.name<-"Wilcoxon, Nemenyi, McDonald-Thompson R"
+  if(standardized){
+    outp$stat.name<-"Wilcoxon, Nemenyi, McDonald-Thompson R (standardized)"    
+  } else{
+    outp$stat.name<-"Wilcoxon, Nemenyi, McDonald-Thompson R"
+  }
+    
   outp$n.mc<-n.mc
   
   ties<-!length(unique(as.numeric(x)))==length(x)
@@ -71,7 +76,10 @@ pWNMT<-function(x,b=NA,trt=NA,method=NA, n.mc=10000){
     possible.perm<-multCh7(possible.ranks)
     exact.dist<-apply(possible.perm,3,R.all)
     for(i in 1:outp$num.comp){
-      outp$p.val[i]<-mean(exact.dist>=outp$obs.stat[i])      
+      outp$p.val[i]<-mean(exact.dist>=outp$obs.stat[i])
+      if(standardized){
+        outp$obs.stat[i] <- outp$obs.stat[i]*(outp$n*outp$k*(outp$k+1)/12)^(-1/2)
+      }
     }
   }
 
@@ -87,14 +95,19 @@ pWNMT<-function(x,b=NA,trt=NA,method=NA, n.mc=10000){
     }
     for(i in 1:outp$num.comp){
       outp$p.val[i]<-mean(mc.stats>=outp$obs.stat[i])      
+      if(standardized){
+        outp$obs.stat[i] <- outp$obs.stat[i]*(outp$n*outp$k*(outp$k+1)/12)^(-1/2)
+      }
     }
   }  
   if(outp$method=="Asymptotic"){
     for(i in 1:outp$num.comp){
       adj<-outp$obs.stat[i]*(outp$n*outp$k*(outp$k+1)/12)^(-1/2)
       outp$p.val[i]<-pRangeNor(adj,outp$k)
+      if(standardized){
+        outp$obs.stat[i] <- adj
+      }
     }
-    
   }
   class(outp)<-"NSM3Ch7MCp"
   outp

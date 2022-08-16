@@ -6,7 +6,7 @@ ccalc <- function(q, m, n) .Call("qAnsari", q, m, n)
 
 N=m+n
 
-if(alpha>1||alpha<0||class(alpha)!="numeric"){
+if(alpha>1||alpha<0||!is.numeric(alpha)){
 	cat('Error: Check alpha value! \n')
 	return(alpha)
 }

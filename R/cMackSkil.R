@@ -7,7 +7,7 @@ cMackSkil<-function(alpha,k,n,c, method=NA, n.mc=10000){
   outp$n<-n
   outp$c<-c
   
-  if(alpha>1||alpha<0||class(alpha)!="numeric"){
+  if(alpha>1||alpha<0||!is.numeric(alpha)){
     cat('Error: Check alpha value! \n')
     return(alpha)
   }

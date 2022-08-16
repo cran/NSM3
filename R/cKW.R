@@ -4,7 +4,7 @@ cKW <-
     outp<-list()
     outp$stat.name<-"Kruskal-Wallis H"
     
-    if(alpha>1||alpha<0||class(alpha)!="numeric"){
+    if(alpha>1||alpha<0||!is.numeric(alpha)){
       cat('Error: Check alpha value! \n')
       return(alpha)
     }

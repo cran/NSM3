@@ -7,7 +7,7 @@ cSkilMack<-function(alpha,obs.mat, method=NA, n.mc=10000){
   outp$n<-n<-nrow(obs.mat) 
   outp$k<-k<-ncol(obs.mat) 
   
-  if(alpha>1||alpha<0||class(alpha)!="numeric"){
+  if(alpha>1||alpha<0||!is.numeric(alpha)){
     cat('Error: Check alpha value! \n')
     return(alpha)
   }

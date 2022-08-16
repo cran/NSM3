@@ -3,7 +3,7 @@ cFrd<-function(alpha, k, n, method=NA, n.mc=10000, return.full.distribution=FALS
   outp$stat.name<-"Friedman, Kendall-Babington Smith S"
   outp$n.mc<-n.mc  
   
-  if(alpha>1||alpha<0||class(alpha)!="numeric"){
+  if(alpha>1||alpha<0||!is.numeric(alpha)){
     cat('Error: Check alpha value! \n')
     return(alpha)
   }     

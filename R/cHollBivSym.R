@@ -2,7 +2,7 @@ cHollBivSym<-function(alpha,d.mat,method=NA, n.mc=10000){
 	
 	outp<-list()
 		
-  if(alpha>1||alpha<0||class(alpha)!="numeric"){
+  if(alpha>1||alpha<0||!is.numeric(alpha)){
 	  cat('Error: Check alpha value! \n')
 	  return(alpha)
 	}
