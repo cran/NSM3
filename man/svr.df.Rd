@@ -10,7 +10,7 @@ Function to compute the Susarla-van Ryzin estimator
 svr.df (z, delta, lambda.hat=0.001, alpha = 3, npoints=2053)
 }
 \arguments{
-\item{z}{the vector of zi = min{Xi, Yi}}
+\item{z}{the vector of zi = min(Xi, Yi)}
 \item{delta}{the vector of indicators which is 1 when Xi<=Yi and 0 otherwise}
 \item{lambda.hat}{the estimate of lambda from the data}
 \item{alpha}{the degree of faith in F0}

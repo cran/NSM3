@@ -1,4 +1,4 @@
-d34408e4caed43b7fab28d2cabb8215c *DESCRIPTION
+db83213036907b1d6a045ca617b1f00c *DESCRIPTION
 69e06f2d6e0133ffe9e567e4581246ce *NAMESPACE
 40033ce5c54a236d936c2fc5dbae3fb5 *R/CorrUpperBound.R
 aead07cf6fc276543f2d9d70ff2ab57a *R/HoeffD.R
@@ -256,11 +256,11 @@ e303ce388e588940824904d1e8902bb6 *man/pWNMT.Rd
 fbfda405186cff06423699722e8caaff *man/qKolSmirnLSA.Rd
 ffbf66a87dc71eccf042be95e325a682 *man/rhythmicity.Rd
 7569e78c4c95363f93db8f84eaa1d9a3 *man/sen.adichie.Rd
-0b2304b1a752cd4ee12f7e1b7fb18165 *man/svr.df.Rd
+86f4835da51acab73a5049166ceb9afb *man/svr.df.Rd
 c8e8741b68cc28384ee0e2c7918c03ed *man/tc.Rd
 db8f224173b6c4789b2f4c1248d9736d *man/theil.Rd
 b029c77045c0474f3097a6e33b4146f7 *man/zelen.test.Rd
 48429176c9e2003568639e1be42aa2e9 *src/ansari.c
-5dda88ac914a65b1f5ec7a428f7386c9 *src/ks.c
+943790d17addb1944d09a9cb97471988 *src/ks.c
 8671aaa13492fa9f961da7d4fbf1fe7e *src/registerDynamicSymbol.c
 c0457e9e6b52c8e635e776e5e595f4fe *src/stats.h
