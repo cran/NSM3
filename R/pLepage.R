@@ -48,8 +48,10 @@ pLepage <-
     tmp.W<-rank(c(x,y))
   
     our.data<-rbind(c(x,y),c(rep(1,length(x)),rep(0,length(y))))
-  	sorted<-our.data[1,order(our.data[1,]) ]
-  	x.labels<-our.data[2,order(our.data[1,]) ]
+    
+    data_order <- order(our.data[1,])
+  	sorted<-our.data[1, data_order]
+  	x.labels<-our.data[2, data_order]
 	  	
   	med<-ceiling(N/2)
   	if(even){no.ties<-c(1:med,med:1)}
@@ -77,7 +79,7 @@ pLepage <-
   	  tied.ranks[which(obs.group==as.numeric(names(group.ranks)[i]))]<-group.ranks[i]  
   	}
 	
-  tmp.C<-c(tied.ranks[x.labels==1],tied.ranks[x.labels==0])
+    tmp.C <- tied.ranks[order(data_order)]
     
   
   ##Only needs to depend on y values
